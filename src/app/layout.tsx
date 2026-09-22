@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Usman Khan (Masterchief) | Backend & Distributed Systems Engineer",
+  title: "Usmaan Khan (Masterchief) | Backend & Distributed Systems Engineer",
   description:
-    "Portfolio of Usman Khan — Backend & Systems Software Engineer specializing in Java, C++, Distributed Systems, high-throughput microservices, and competitive programming.",
+    "Portfolio of Usmaan Khan — Backend & Systems Software Engineer specializing in Java, C++, Distributed Systems, high-throughput microservices, and competitive programming.",
   keywords: [
     "Backend Engineer",
     "Systems Engineer",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     "Docker",
     "Kafka",
   ],
-  authors: [{ name: "Usman Khan", url: "https://github.com/urfav-masterchief" }],
+  authors: [{ name: "Usmaan Khan", url: "https://github.com/urfav-masterchief" }],
   openGraph: {
-    title: "Usman Khan | Backend & Distributed Systems Engineer",
+    title: "Usmaan Khan | Backend & Distributed Systems Engineer",
     description:
       "Engineering resilient backend architectures and low-latency systems in Java & C++.",
     type: "website",

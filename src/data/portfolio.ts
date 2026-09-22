@@ -29,15 +29,15 @@ export interface ExperienceItem {
 
 export const PORTFOLIO_DATA = {
   personal: {
-    name: "Usman Khan",
+    name: "Usmaan Khan",
     alias: "Masterchief",
     headline: "Backend & Distributed Systems Engineer",
     shortBio:
       "Passionate software engineer specializing in high-throughput backend architecture, distributed systems, and low-latency system design. Building resilient services with Java and C++ with a strong foundation in data structures & algorithms.",
     location: "India",
     availability: "Open for Full-Time Roles & High-Impact Engineering Projects",
-    avatar: "/profile-avatar.png", // fallback or stylized terminal avatar
-    resumeUrl: "#contact", // or link to /resume.pdf
+    avatar: "/profile-avatar.png",
+    resumeUrl: "#contact",
   },
 
   socials: {
@@ -47,15 +47,15 @@ export const PORTFOLIO_DATA = {
       username: "urfav-masterchief",
     },
     linkedin: {
-      url: "https://linkedin.com/in/your-linkedin-profile",
+      url: "https://www.linkedin.com/in/usmaan-khan-a2a88a429/",
       label: "LinkedIn",
-      username: "usman-khan",
+      username: "usmaan-khan",
     },
     codeforces: {
-      url: "https://codeforces.com/profile/urfav-masterchief",
+      url: "https://codeforces.com/profile/urfav_mani",
       label: "Codeforces",
-      username: "urfav-masterchief",
-      rank: "Specialist / Candidate Master track",
+      username: "urfav_mani",
+      rank: "Active Competitor",
       problemsSolved: "500+",
       favoriteTopics: ["Dynamic Programming", "Graphs", "Number Theory", "Binary Search"],
     },
@@ -214,8 +214,8 @@ export const PORTFOLIO_DATA = {
   competitiveProgramming: {
     title: "Competitive Programming & Problem Solving",
     subtitle: "Sharpening algorithmic thinking, time complexity optimization, and edge-case mastery.",
-    codeforcesHandle: "urfav-masterchief",
-    codeforcesUrl: "https://codeforces.com/profile/urfav-masterchief",
+    codeforcesHandle: "urfav_mani",
+    codeforcesUrl: "https://codeforces.com/profile/urfav_mani",
     stats: [
       { label: "Problems Solved", value: "600+" },
       { label: "Core Contest Languages", value: "C++20 / Java" },
