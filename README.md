@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Usman Khan (Masterchief) — Portfolio Website
 
-## Getting Started
+A modern, high-performance, dark minimalist portfolio built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**, engineered specifically for a **Backend & Distributed Systems Engineer**.
 
-First, run the development server:
+---
 
+## ⚡ Key Highlights
+
+- **Live Interactive System Console (`SystemTerminal.tsx`)**: Visitors can type CLI commands (`help`, `skills`, `projects`, `codeforces`, `stats`, `ping`, `clear`) or click preset command chips.
+- **Dedicated Competitive Programming Showcase (`CompetitiveProgrammingSection.tsx`)**: Spotlight on your **Codeforces** profile (`@urfav-masterchief`), 600+ solved problems, algorithmic topic mastery (DP, Graphs, Trees, Binary Search), and contest discipline.
+- **Flagship Distributed Projects (`ProjectsSection.tsx`)**: Cards featuring architectural throughput/latency metrics (`< 1.8ms p99`, `50,000 msg/s`), tech tags, and an interactive **Architecture Deep-Dive Modal**.
+- **Categorized Skills Matrix (`SkillsSection.tsx`)**: Systems & Languages, Backend & Microservices, Databases & In-Memory, and DevOps/Cloud.
+- **Direct Connect & Socials**: Direct links to **GitHub**, **LinkedIn**, and **Codeforces**, alongside a one-click copy email button with visual confirmation and an interactive contact dispatch form.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Run Development Server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the portfolio live.
+
+### 2. Build for Production
+```bash
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ How to Customize Your Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All portfolio content is centralized in a single, clean file:
+👉 **[`src/data/portfolio.ts`](file:///home/urfavmani/Projects/portfolio/src/data/portfolio.ts)**
 
-## Learn More
+### Social Links & Profiles
+Open `src/data/portfolio.ts` to update your links:
+```typescript
+socials: {
+  github: {
+    url: "https://github.com/urfav-masterchief",
+    label: "GitHub",
+    username: "urfav-masterchief",
+  },
+  linkedin: {
+    url: "https://linkedin.com/in/your-linkedin-id", // Replace with your profile URL
+    label: "LinkedIn",
+    username: "usman-khan",
+  },
+  codeforces: {
+    url: "https://codeforces.com/profile/urfav-masterchief", // Replace with your handle
+    label: "Codeforces",
+    username: "urfav-masterchief",
+    rank: "Specialist",
+    problemsSolved: "600+",
+  },
+  email: "usmaank022@gmail.com",
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Adding or Modifying Projects
+In `src/data/portfolio.ts`, look for `projects: [...]`. You can add new projects or modify existing ones with your own GitHub repositories, metrics, and architecture descriptions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Free Deployment (Vercel)
+Deploy in under 2 minutes:
+1. Push this repository to your GitHub account:
+   ```bash
+   git add .
+   git commit -m "Portfolio initial commit"
+   git branch -M main
+   git remote add origin git@github.com:urfav-masterchief/portfolio.git
+   git push -u origin main
+   ```
+2. Import the repository into [Vercel](https://vercel.com) (free) and click **Deploy**.
