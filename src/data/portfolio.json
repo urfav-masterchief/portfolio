@@ -1,7 +1,7 @@
 {
   "personal": {
-    "name": "Usmaan Khan",
-    "alias": "Masterchief",
+    "name": "Usmaan Ahamed Khan",
+    "alias": "Usmaan",
     "headline": "Backend & Distributed Systems Engineer",
     "shortBio": "Passionate software developer focusing on backend architecture, resilient services with Java and C++, and actively strengthening foundations in Data Structures, Algorithms, and System Design.",
     "location": "India",
@@ -36,55 +36,147 @@
     "email": "usmaank022@gmail.com"
   },
   "stats": [
-    { "label": "DSA Practice", "value": "Active", "change": "In Progress" },
-    { "label": "Core Focus", "value": "Java & C++", "change": "Backend" },
-    { "label": "System Architecture", "value": "Clean Code", "change": "Scalable" },
-    { "label": "Execution Target", "value": "Optimized", "change": "Resilient" }
+    {
+      "label": "DSA Practice",
+      "value": "Active",
+      "change": "In Progress"
+    },
+    {
+      "label": "Core Focus",
+      "value": "Java & C++",
+      "change": "Backend"
+    },
+    {
+      "label": "System Architecture",
+      "value": "Clean Code",
+      "change": "Scalable"
+    },
+    {
+      "label": "Execution Target",
+      "value": "Optimized",
+      "change": "Resilient"
+    }
   ],
   "skillCategories": [
     {
       "title": "Core Languages & Systems",
       "icon": "Cpu",
       "skills": [
-        { "name": "Java (17/21)", "level": "Core Focus", "highlight": true },
-        { "name": "C++ (17/20)", "level": "Core Focus", "highlight": true },
-        { "name": "C", "level": "Foundational" },
-        { "name": "TypeScript", "level": "Proficient" },
-        { "name": "SQL", "level": "Working Knowledge", "highlight": true },
-        { "name": "Bash / Linux", "level": "Comfortable" }
+        {
+          "name": "Java (17/21)",
+          "level": "Core Focus",
+          "highlight": true
+        },
+        {
+          "name": "C++ (17/20)",
+          "level": "Core Focus",
+          "highlight": true
+        },
+        {
+          "name": "C",
+          "level": "Foundational"
+        },
+        {
+          "name": "TypeScript",
+          "level": "Proficient"
+        },
+        {
+          "name": "SQL",
+          "level": "Working Knowledge",
+          "highlight": true
+        },
+        {
+          "name": "Bash / Linux",
+          "level": "Comfortable"
+        }
       ]
     },
     {
       "title": "Backend & Microservices",
       "icon": "Server",
       "skills": [
-        { "name": "Spring Boot", "level": "In Progress", "highlight": true },
-        { "name": "RESTful API Design", "level": "Core Focus", "highlight": true },
-        { "name": "Microservices Principles", "level": "Learning", "highlight": true },
-        { "name": "Node.js & Express", "level": "Working Knowledge" },
-        { "name": "Object-Oriented Programming", "level": "Advanced", "highlight": true },
-        { "name": "Concurrency Basics", "level": "Learning" }
+        {
+          "name": "Spring Boot",
+          "level": "In Progress",
+          "highlight": true
+        },
+        {
+          "name": "RESTful API Design",
+          "level": "Core Focus",
+          "highlight": true
+        },
+        {
+          "name": "Microservices Principles",
+          "level": "Learning",
+          "highlight": true
+        },
+        {
+          "name": "Node.js & Express",
+          "level": "Working Knowledge",
+          "highlight": false
+        },
+        {
+          "name": "Object-Oriented Programming",
+          "level": "Advanced",
+          "highlight": true
+        },
+        {
+          "name": "Concurrency Basics",
+          "level": "Learning"
+        }
       ]
     },
     {
       "title": "Databases & In-Memory",
       "icon": "Database",
       "skills": [
-        { "name": "PostgreSQL", "level": "Working Knowledge", "highlight": true },
-        { "name": "Redis (Caching)", "level": "Learning", "highlight": true },
-        { "name": "MySQL", "level": "Working Knowledge" },
-        { "name": "MongoDB", "level": "Familiar" },
-        { "name": "Relational Data Modeling", "level": "Core Focus" }
+        {
+          "name": "PostgreSQL",
+          "level": "Working Knowledge",
+          "highlight": true
+        },
+        {
+          "name": "Redis (Caching)",
+          "level": "Learning",
+          "highlight": true
+        },
+        {
+          "name": "MySQL",
+          "level": "Working Knowledge"
+        },
+        {
+          "name": "MongoDB",
+          "level": "Familiar"
+        },
+        {
+          "name": "Relational Data Modeling",
+          "level": "Core Focus"
+        }
       ]
     },
     {
       "title": "DevOps, Cloud & Architecture",
       "icon": "Layers",
       "skills": [
-        { "name": "Git & GitHub", "level": "Proficient", "highlight": true },
-        { "name": "Docker Basics", "level": "Learning", "highlight": true },
-        { "name": "Linux Environment", "level": "Comfortable", "highlight": true },
-        { "name": "Clean Architecture", "level": "Core Focus" }
+        {
+          "name": "Git & GitHub",
+          "level": "Proficient",
+          "highlight": true
+        },
+        {
+          "name": "Docker Basics",
+          "level": "Learning",
+          "highlight": true
+        },
+        {
+          "name": "Linux Environment",
+          "level": "Comfortable",
+          "highlight": true
+        },
+        {
+          "name": "Clean Architecture",
+          "level": "Core Focus"
+        }
       ]
     }
   ],
@@ -101,11 +193,26 @@
         "Persistent write-ahead log (WAL) for fault recovery"
       ],
       "metrics": [
-        { "label": "Language", "value": "C++20" },
-        { "label": "Thread Safety", "value": "Mutex & Atomic" },
-        { "label": "Status", "value": "In Development" }
+        {
+          "label": "Language",
+          "value": "C++20"
+        },
+        {
+          "label": "Thread Safety",
+          "value": "Mutex & Atomic"
+        },
+        {
+          "label": "Status",
+          "value": "In Development"
+        }
       ],
-      "tags": ["C++", "Multi-Threading", "POSIX Sockets", "Concurrency", "DSA"],
+      "tags": [
+        "C++",
+        "Multi-Threading",
+        "POSIX Sockets",
+        "Concurrency",
+        "DSA"
+      ],
       "githubUrl": "https://github.com/urfav-masterchief",
       "liveUrl": "",
       "featured": true
@@ -122,11 +229,26 @@
         "REST API endpoints with structured JSON responses"
       ],
       "metrics": [
-        { "label": "Language", "value": "Java 21" },
-        { "label": "Framework", "value": "Spring Boot" },
-        { "label": "Database", "value": "PostgreSQL" }
+        {
+          "label": "Language",
+          "value": "Java 21"
+        },
+        {
+          "label": "Framework",
+          "value": "Spring Boot"
+        },
+        {
+          "label": "Database",
+          "value": "PostgreSQL"
+        }
       ],
-      "tags": ["Java", "Spring Boot", "PostgreSQL", "REST APIs", "Maven"],
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "REST APIs",
+        "Maven"
+      ],
       "githubUrl": "https://github.com/urfav-masterchief",
       "liveUrl": "",
       "featured": true
@@ -143,11 +265,26 @@
         "Detailed time and space complexity annotations for every solution"
       ],
       "metrics": [
-        { "label": "Languages", "value": "Java & C++" },
-        { "label": "Platform", "value": "Codeforces" },
-        { "label": "Pace", "value": "Daily Practice" }
+        {
+          "label": "Languages",
+          "value": "Java & C++"
+        },
+        {
+          "label": "Platform",
+          "value": "Codeforces"
+        },
+        {
+          "label": "Pace",
+          "value": "Daily Practice"
+        }
       ],
-      "tags": ["Java", "C++", "DSA", "Codeforces", "Problem Solving"],
+      "tags": [
+        "Java",
+        "C++",
+        "DSA",
+        "Codeforces",
+        "Problem Solving"
+      ],
       "githubUrl": "https://github.com/urfav-masterchief/PersonalClassroom",
       "liveUrl": "",
       "featured": true
@@ -159,17 +296,49 @@
     "codeforcesHandle": "urfav_mani",
     "codeforcesUrl": "https://codeforces.com/profile/urfav_mani",
     "stats": [
-      { "label": "Current Journey", "value": "Active Practice" },
-      { "label": "Contest Languages", "value": "Java & C++" },
-      { "label": "Target Goal", "value": "Road to 100+" },
-      { "label": "Core Focus", "value": "Foundations & Patterns" }
+      {
+        "label": "Current Journey",
+        "value": "Active Practice"
+      },
+      {
+        "label": "Contest Languages",
+        "value": "Java & C++"
+      },
+      {
+        "label": "Target Goal",
+        "value": "Road to 100+"
+      },
+      {
+        "label": "Core Focus",
+        "value": "Foundations & Patterns"
+      }
     ],
     "topicMastery": [
-      { "name": "Arrays, Strings & Two Pointers", "count": "Active Practice", "proficiency": 75 },
-      { "name": "Binary Search & Sorting Algorithms", "count": "In Progress", "proficiency": 70 },
-      { "name": "Recursion & Backtracking", "count": "In Progress", "proficiency": 60 },
-      { "name": "Object-Oriented Programming (OOP)", "count": "Active Focus", "proficiency": 80 },
-      { "name": "Trees & Graph Fundamentals", "count": "Starting Next", "proficiency": 40 }
+      {
+        "name": "Arrays, Strings & Two Pointers",
+        "count": "Active Practice",
+        "proficiency": 75
+      },
+      {
+        "name": "Binary Search & Sorting Algorithms",
+        "count": "In Progress",
+        "proficiency": 70
+      },
+      {
+        "name": "Recursion & Backtracking",
+        "count": "In Progress",
+        "proficiency": 60
+      },
+      {
+        "name": "Object-Oriented Programming (OOP)",
+        "count": "Active Focus",
+        "proficiency": 80
+      },
+      {
+        "name": "Trees & Graph Fundamentals",
+        "count": "Starting Next",
+        "proficiency": 40
+      }
     ]
   },
   "experience": [
@@ -183,7 +352,14 @@
         "Practicing Data Structures & Algorithms daily and competing on Codeforces under handle @urfav_mani.",
         "Learning distributed systems principles, database indexing, and containerization."
       ],
-      "technologies": ["Java", "C++", "Spring Boot", "PostgreSQL", "Git", "Linux"]
+      "technologies": [
+        "Java",
+        "C++",
+        "Spring Boot",
+        "PostgreSQL",
+        "Git",
+        "Linux"
+      ]
     },
     {
       "period": "2022 - Present",
@@ -194,7 +370,14 @@
         "Core foundational coursework in Data Structures, Algorithms, Operating Systems, and Object-Oriented Software Design.",
         "Building practical software implementations alongside academic theory."
       ],
-      "technologies": ["Data Structures", "Algorithms", "Java", "C++", "OOP", "DBMS"]
+      "technologies": [
+        "Data Structures",
+        "Algorithms",
+        "Java",
+        "C++",
+        "OOP",
+        "DBMS"
+      ]
     }
   ]
 }

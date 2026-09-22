@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07080c;
-  --foreground: #e6edf3;
-  --card-bg: #0e1118;
-  --card-border: #1e2433;
+  --background: #05070c;
+  --foreground: #e2e8f0;
+  --text-muted: #94a3b8;
+  --card-bg: #0a0d15;
+  --card-border: #161e2e;
   --accent-cyan: #00f2fe;
   --accent-emerald: #10b981;
   --accent-violet: #8b5cf6;
@@ -18,51 +19,49 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans-main), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom subtle scrollbar */
+code, kbd, samp, pre, .font-mono {
+  font-family: var(--font-mono-main), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Eye-soothing subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #07080c;
+  background: #05070c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e2433;
-  border-radius: 4px;
+  background: #192233;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2e384e;
+  background: #25334c;
 }
 
-/* Background grid pattern */
+/* Background subtle grid pattern */
 .bg-grid-pattern {
-  background-size: 40px 40px;
+  background-size: 48px 48px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
-/* Radial subtle glow */
-.bg-glow-top {
-  background: radial-gradient(ellipse 60% 40% at 50% -10%, rgba(6, 182, 212, 0.15), transparent 70%);
-}
-
-.bg-glow-accent {
-  background: radial-gradient(circle 300px at 50% 50%, rgba(139, 92, 246, 0.08), transparent 70%);
-}
-
-/* Glowing text and borders */
+/* Glowing text and soft borders */
 .glow-cyan {
-  text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  text-shadow: 0 0 24px rgba(6, 182, 212, 0.35);
 }
 
 .border-glow {
-  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.15);
+  box-shadow: 0 0 20px -3px rgba(6, 182, 212, 0.12);
 }

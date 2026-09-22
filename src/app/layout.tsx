@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sansFont = Plus_Jakarta_Sans({
+  variable: "--font-sans-main",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const monoFont = JetBrains_Mono({
+  variable: "--font-mono-main",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -48,9 +52,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${sansFont.variable} ${monoFont.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#07080c] text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body className="min-h-full flex flex-col bg-[#05070c] text-[#e2e8f0] selection:bg-cyan-500/25 selection:text-cyan-200">
         {children}
       </body>
     </html>
