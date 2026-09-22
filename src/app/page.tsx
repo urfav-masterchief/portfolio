@@ -7,12 +7,17 @@ import CompetitiveProgrammingSection from "@/components/CompetitiveProgrammingSe
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import AntigravityBackground from "@/components/AntigravityBackground";
+import FloatingEditorTrigger from "@/components/FloatingEditorTrigger";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#07080c] text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200 relative bg-grid-pattern">
+    <div className="min-h-screen text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200 relative bg-grid-pattern">
+      {/* Interactive Astra & Antigravity Physics Background */}
+      <AntigravityBackground />
+
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <AboutSection />
         <SkillsSection />
@@ -22,6 +27,9 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+
+      {/* Floating 1-Click Portfolio Editor Trigger */}
+      <FloatingEditorTrigger />
     </div>
   );
 }

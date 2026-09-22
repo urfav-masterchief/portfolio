@@ -53,7 +53,7 @@ export default function Hero() {
 
             {/* Subtitle / Bio */}
             <p className="text-base sm:text-lg text-neutral-400 leading-relaxed max-w-2xl">
-              Backend & systems engineer focused on high-throughput microservices, low-latency concurrent architectures in <strong className="text-neutral-200 font-medium">Java & C++</strong>, and competitive programming with over <strong className="text-cyan-300 font-medium">600+ algorithmic problems solved</strong>.
+              {PORTFOLIO_DATA.personal.shortBio}
             </p>
 
             {/* Social Links Bar */}
