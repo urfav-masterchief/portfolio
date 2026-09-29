@@ -101,7 +101,7 @@
           "highlight": true
         },
         {
-          "name": "RESTful API Design",
+          "name": "Restful API Design",
           "level": "Core Focus",
           "highlight": true
         },
@@ -379,5 +379,31 @@
         "DBMS"
       ]
     }
-  ]
+  ],
+  "layout": {
+    "heroVisual": "terminal",
+    "customPictureUrl": "",
+    "customPictureCaption": "Usmaan Khan — Backend & Distributed Systems",
+    "showAbout": true,
+    "showSkills": true,
+    "showProjects": true,
+    "showCompetitiveProgramming": true,
+    "showExperience": true,
+    "showContact": true
+  },
+  "typography": {
+    "headingFont": "Plus Jakarta Sans",
+    "bodyFont": "Plus Jakarta Sans",
+    "monoFont": "JetBrains Mono",
+    "headingWeight": "bold",
+    "letterSpacing": "tight"
+  },
+  "theme": {
+    "preset": "astra-dark",
+    "primaryColor": "#00f2fe",
+    "secondaryColor": "#8b5cf6",
+    "accentColor": "#10b981",
+    "backgroundColor": "#05070c",
+    "cardColor": "#0a0d15"
+  }
 }

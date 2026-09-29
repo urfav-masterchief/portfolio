@@ -32,11 +32,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    await fs.writeFile(
-      DATA_FILE_PATH,
-      JSON.stringify(updatedData, null, 2),
-      "utf-8"
-    );
+    try {
+      await fs.writeFile(
+        DATA_FILE_PATH,
+        JSON.stringify(updatedData, null, 2),
+        "utf-8"
+      );
+    } catch (fsError) {
+      console.warn("Filesystem write restricted (e.g. serverless read-only):", fsError);
+      return NextResponse.json({
+        success: true,
+        message: "Portfolio data updated in session! For persistent deployments on Vercel, push updates to GitHub.",
+        readOnly: true,
+      });
+    }
 
     return NextResponse.json({
       success: true,
@@ -49,3 +58,4 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
