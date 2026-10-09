@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
-import { Terminal as TerminalIcon, Sparkles, CornerDownLeft, Play } from "lucide-react";
+import { Terminal as TerminalIcon, Sparkles, Play } from "lucide-react";
 
 interface CommandHistory {
   command: string;
@@ -180,7 +180,7 @@ export default function SystemTerminal() {
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
           <span className="text-xs text-neutral-400 ml-2 font-mono flex items-center gap-1.5">
             <TerminalIcon className="w-3.5 h-3.5 text-cyan-400" />
-            usman@systems-node:~
+            Usmaan@systems-node:~
           </span>
         </div>
 
@@ -197,7 +197,7 @@ export default function SystemTerminal() {
         {history.map((item, idx) => (
           <div key={idx} className="space-y-1">
             <div className="flex items-center gap-2 text-xs font-mono">
-              <span className="text-cyan-400">masterchief@engine</span>
+              <span className="text-cyan-400">Usmaan@engine</span>
               <span className="text-neutral-500">:</span>
               <span className="text-violet-400">~</span>
               <span className="text-neutral-400">$</span>

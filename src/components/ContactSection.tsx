@@ -9,6 +9,8 @@ import {
   Check,
   Send,
   MessageSquare,
+  AlertCircle,
+  Loader2,
 } from "lucide-react";
 
 export default function ContactSection() {
@@ -18,8 +20,11 @@ export default function ContactSection() {
     email: "",
     subject: "",
     message: "",
+    website: "",
   });
+  const [isSending, setIsSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PORTFOLIO_DATA.socials.email);
@@ -27,13 +32,32 @@ export default function ContactSection() {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormState({ name: "", email: "", subject: "", message: "" });
-    }, 4000);
+    setIsSending(true);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to dispatch message. Please try again.");
+      }
+
+      setSubmitted(true);
+      setFormState({ name: "", email: "", subject: "", message: "", website: "" });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -69,9 +93,13 @@ export default function ContactSection() {
               </p>
 
               <div className="p-3 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-between gap-2">
-                <span className="font-mono text-xs text-cyan-300 truncate">
+                <a
+                  href={`mailto:${PORTFOLIO_DATA.socials.email}`}
+                  className="font-mono text-xs text-cyan-300 hover:underline truncate"
+                  title="Send email directly"
+                >
                   {PORTFOLIO_DATA.socials.email}
-                </span>
+                </a>
 
                 <button
                   onClick={handleCopyEmail}
@@ -194,9 +222,39 @@ export default function ContactSection() {
                   <p className="text-xs text-neutral-400 max-w-sm mx-auto">
                     Thank you for reaching out. I will review your message and reply via email promptly.
                   </p>
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setSubmitted(false)}
+                      className="text-xs font-mono text-cyan-400 hover:text-cyan-300 underline"
+                    >
+                      Send Another Message &rarr;
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Honeypot field for bot spam prevention */}
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input
+                      id="website"
+                      type="text"
+                      name="website"
+                      value={formState.website}
+                      onChange={(e) => setFormState({ ...formState, website: e.target.value })}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-lg bg-red-950/40 border border-red-500/40 text-red-300 text-xs font-mono flex items-start gap-2">
+                      <AlertCircle className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
+                      <span className="flex-1">{errorMessage}</span>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="text-xs font-mono text-neutral-400">
@@ -205,10 +263,12 @@ export default function ContactSection() {
                       <input
                         type="text"
                         required
+                        maxLength={100}
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors"
+                        disabled={isSending}
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-60"
                       />
                     </div>
 
@@ -219,10 +279,12 @@ export default function ContactSection() {
                       <input
                         type="email"
                         required
+                        maxLength={254}
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                         placeholder="john@example.com"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors"
+                        disabled={isSending}
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-60"
                       />
                     </div>
                   </div>
@@ -234,10 +296,12 @@ export default function ContactSection() {
                     <input
                       type="text"
                       required
+                      maxLength={200}
                       value={formState.subject}
                       onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
                       placeholder="Opportunity / Technical Collaboration / Inquiry"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors"
+                      disabled={isSending}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-60"
                     />
                   </div>
 
@@ -248,19 +312,31 @@ export default function ContactSection() {
                     <textarea
                       required
                       rows={5}
+                      maxLength={5000}
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       placeholder="Share details about the role, project scope, or questions..."
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors resize-none"
+                      disabled={isSending}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-100 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-colors resize-none disabled:opacity-60"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 px-5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-neutral-950 font-mono text-xs font-bold transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2"
+                    disabled={isSending}
+                    className="w-full py-3 px-5 rounded-lg bg-cyan-500 hover:bg-cyan-400 disabled:opacity-50 disabled:cursor-not-allowed text-neutral-950 font-mono text-xs font-bold transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    <span>Transmit Message</span>
+                    {isSending ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        <span>Transmitting...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3.5 h-3.5" />
+                        <span>Transmit Message</span>
+                      </>
+                    )}
                   </button>
                 </form>
               )}

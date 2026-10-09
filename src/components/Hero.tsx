@@ -5,7 +5,6 @@ import { PORTFOLIO_DATA, PortfolioLayout } from "@/data/portfolio";
 import { GithubIcon, LinkedinIcon, CodeforcesIcon } from "@/components/Icons";
 import {
   ArrowRight,
-  Download,
   Terminal as TerminalIcon,
   Server,
   Activity,
@@ -21,7 +20,7 @@ export default function Hero() {
     PORTFOLIO_DATA.layout || {
       heroVisual: "terminal",
       customPictureUrl: "",
-      customPictureCaption: "Usmaan Khan — Backend & Distributed Systems",
+      customPictureCaption: "Usmaan Ahamed Khan — Backend & Distributed Systems",
       showAbout: true,
       showSkills: true,
       showProjects: true,
@@ -169,14 +168,6 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-neutral-200 font-medium text-sm border border-neutral-800 hover:border-neutral-700 transition-all"
               >
                 <span>Get In Touch</span>
-              </a>
-
-              <a
-                href={PORTFOLIO_DATA.personal.resumeUrl}
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-lg text-neutral-400 hover:text-neutral-200 text-sm font-mono transition-colors"
-              >
-                <Download className="w-4 h-4" />
-                <span>Resume / CV</span>
               </a>
             </div>
 

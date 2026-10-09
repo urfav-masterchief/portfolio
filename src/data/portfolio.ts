@@ -108,7 +108,7 @@ export interface PortfolioData {
 export const DEFAULT_LAYOUT: PortfolioLayout = {
   heroVisual: "terminal",
   customPictureUrl: "",
-  customPictureCaption: "Usmaan Khan — Backend & Distributed Systems",
+  customPictureCaption: "Usmaan Ahamed Khan — Backend & Distributed Systems",
   showAbout: true,
   showSkills: true,
   showProjects: true,

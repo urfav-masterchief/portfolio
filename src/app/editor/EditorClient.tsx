@@ -745,7 +745,7 @@ export default function EditorClient() {
                       </label>
                       <input
                         type="text"
-                        placeholder="e.g. Usmaan Khan — Distributed Systems"
+                        placeholder="e.g. Usmaan Ahamed Khan — Distributed Systems"
                         value={currentLayout.customPictureCaption || ""}
                         onChange={(e) =>
                           setData({

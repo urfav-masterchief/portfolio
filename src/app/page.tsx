@@ -20,7 +20,7 @@ export default function Home() {
     PORTFOLIO_DATA.layout || {
       heroVisual: "terminal",
       customPictureUrl: "",
-      customPictureCaption: "Usmaan Khan — Backend & Distributed Systems",
+      customPictureCaption: "Usmaan Ahamed Khan — Backend & Distributed Systems",
       showAbout: true,
       showSkills: true,
       showProjects: true,

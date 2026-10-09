@@ -1,4 +1,4 @@
-# Usman Khan (Masterchief) — Portfolio Website
+# Usmaan Ahamed Khan (Masterchief) — Portfolio Website
 
 A modern, high-performance, dark minimalist portfolio built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**, engineered specifically for a **Backend & Distributed Systems Engineer**.
 
@@ -7,7 +7,7 @@ A modern, high-performance, dark minimalist portfolio built with **Next.js (App 
 ## ⚡ Key Highlights
 
 - **Live Interactive System Console (`SystemTerminal.tsx`)**: Visitors can type CLI commands (`help`, `skills`, `projects`, `codeforces`, `stats`, `ping`, `clear`) or click preset command chips.
-- **Dedicated Competitive Programming Showcase (`CompetitiveProgrammingSection.tsx`)**: Spotlight on your **Codeforces** profile (`@urfav-masterchief`), 600+ solved problems, algorithmic topic mastery (DP, Graphs, Trees, Binary Search), and contest discipline.
+- **Dedicated Competitive Programming Showcase (`CompetitiveProgrammingSection.tsx`)**: Spotlight on your **Codeforces** profile (`@urfav_mani`), 600+ solved problems, algorithmic topic mastery (DP, Graphs, Trees, Binary Search), and contest discipline.
 - **Flagship Distributed Projects (`ProjectsSection.tsx`)**: Cards featuring architectural throughput/latency metrics (`< 1.8ms p99`, `50,000 msg/s`), tech tags, and an interactive **Architecture Deep-Dive Modal**.
 - **Categorized Skills Matrix (`SkillsSection.tsx`)**: Systems & Languages, Backend & Microservices, Databases & In-Memory, and DevOps/Cloud.
 - **Direct Connect & Socials**: Direct links to **GitHub**, **LinkedIn**, and **Codeforces**, alongside a one-click copy email button with visual confirmation and an interactive contact dispatch form.
@@ -47,14 +47,14 @@ socials: {
   linkedin: {
     url: "https://linkedin.com/in/your-linkedin-id", // Replace with your profile URL
     label: "LinkedIn",
-    username: "usman-khan",
+    username: "usmaan-ahamed-khan",
   },
   codeforces: {
-    url: "https://codeforces.com/profile/urfav-masterchief", // Replace with your handle
+    url: "https://codeforces.com/profile/urfav_mani", // Replace with your handle
     label: "Codeforces",
-    username: "urfav-masterchief",
-    rank: "Specialist",
-    problemsSolved: "600+",
+    username: "urfav_mani",
+    rank: "Active Competitor",
+    problemsSolved: "Road to 100",
   },
   email: "usmaank022@gmail.com",
 }
