@@ -2,7 +2,17 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  return new NextResponse("Not Found", { status: 404 });
+}
+
 export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV !== "development") {
+    return new NextResponse("Not Found", { status: 404 });
+  }
+
   try {
     const formData = await req.formData();
     const file = formData.get("file") as File | null;

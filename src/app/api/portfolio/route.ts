@@ -2,9 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 const DATA_FILE_PATH = path.join(process.cwd(), "src", "data", "portfolio.json");
 
 export async function GET() {
+  if (process.env.NODE_ENV !== "development") {
+    return new NextResponse("Not Found", { status: 404 });
+  }
+
   try {
     const fileData = await fs.readFile(DATA_FILE_PATH, "utf-8");
     const json = JSON.parse(fileData);
@@ -22,6 +28,9 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV !== "development") {
+    return new NextResponse("Not Found", { status: 404 });
+  }
   try {
     const updatedData = await req.json();
 

@@ -280,16 +280,20 @@ export default function Hero() {
                               No Custom Picture Uploaded
                             </p>
                             <p className="text-xs text-neutral-400 font-mono mt-1">
-                              Upload your photo directly from the Editor Panel.
+                              {process.env.NODE_ENV === "development"
+                                ? "Upload your photo directly from the Editor Panel."
+                                : "Backend & Distributed Systems Engineer"}
                             </p>
                           </div>
-                          <a
-                            href="/editor"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-mono hover:bg-cyan-500/30 transition-all"
-                          >
-                            <span>Open Editor & Upload</span>
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </a>
+                          {process.env.NODE_ENV === "development" && (
+                            <a
+                              href="/editor"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-mono hover:bg-cyan-500/30 transition-all"
+                            >
+                              <span>Open Editor & Upload</span>
+                              <ArrowRight className="w-3.5 h-3.5" />
+                            </a>
+                          )}
                         </div>
                       )}
 

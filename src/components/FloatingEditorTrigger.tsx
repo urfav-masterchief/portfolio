@@ -1,9 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Sliders, Sparkles } from "lucide-react";
+import { Sliders } from "lucide-react";
 
 export default function FloatingEditorTrigger() {
+  if (process.env.NODE_ENV !== "development") {
+    return null;
+  }
+
   return (
     <div className="fixed bottom-6 right-6 z-40">
       <Link
